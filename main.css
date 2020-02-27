@@ -1,0 +1,189 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem;
+  color: white;
+  text-transform: uppercase;
+  background: purple;
+}
+
+.btn{
+ padding: 0.6rem 1rem;
+ text-transform: uppercase;
+ margin-right: 2rem;
+ border-radius: 10px;
+ background: orange;
+ cursor: pointer;
+ border: 1px solid orange;
+ outline: none;
+
+
+}
+
+.responsive-img{
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+.btn-movie{
+  z-index: 100 !important;
+}
+
+
+
+.btn:hover{
+  background: rgb(204, 160, 79);
+}
+
+.movie-container{
+  text-align: center;
+
+
+}
+
+h1{
+  font-size: 1.4rem;
+}
+
+h4{
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.mb-5{
+  margin-bottom: 3rem;
+}
+
+.content{
+  box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+  background: white;
+  color:#333;
+  width: 500px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+
+
+.content-info{
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  height: calc(100vh - 75px);
+}
+
+.modal{
+  width: 39rem; 
+  box-shadow: 2px 3px 3px 2px rgba(0,0,0,0.25);
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #f4f4f4;
+  z-index: 100;
+  pointer-events: all;
+  animation: slideDown 0.4s ease-in-out;
+}
+
+label{
+  font-weight: bolder;
+  font-size: 1.2rem;
+  
+}
+
+.modal-content{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(42, 42, 42, 0.5);
+  z-index: 5;
+  pointer-events: none !important;
+  
+ 
+}
+
+@keyframes slideDown{
+
+  0%{
+    transform: translateY(-5rem);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+
+
+.hide{
+  display: none;
+}
+
+.input{
+  display: block;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  width: 90%;
+  padding:0.5rem 1rem;
+  border-radius: 10px;
+  outline: none;
+  
+}
+
+.input:focus{
+  background: #ccc;
+}
+
+.btn-cancel{
+  background: transparent;
+  border: none;
+}
+
+.btn-cancel:hover{
+  border: none;
+  background: purple;
+}
+
+.btn-add{
+  background: #00329e;
+  color: white;
+}
+
+.btn-add:hover{
+  background: purple;
+}
+
+.buttons{
+  margin-left: 60%;
+}
+
+.movie-title{
+  font-size: 3rem;
+  display: block;
+  margin-left: 0;
+}
+.movie-rating{
+  font-size: 1.5rem;
+  background: orange;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 10px;
+ 
+}
