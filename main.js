@@ -9,6 +9,7 @@
 // klikom na single film, film se brise +
 // prikazi tacnu sliku +
 // Alert ako polje rating nema vrednost 1-5 +
+// u sledecem navratu napravit custom polje za poruku umesto alert
 
 // bonus treba da moze da se redja vise filmova
 
@@ -47,12 +48,21 @@ form.addEventListener('submit', e => {
 
   movies.push(singleMovie);
 
+   if(singleMovie.title.length === 0){
+
+    modalContent.classList.add('show');  
+   } else {
+
+      modalContent.classList.add('hide');  
+      modalContent.classList.remove('show');  
+   }
+
   displayMovie(movies);
   messageRating(singleMovie);
   
  clearFields(modalTitle, modalURl,modalRating)
-  modalContent.classList.add('hide');  
-
+ 
+  
 });
 
 function displayMovie(movies) {
@@ -84,11 +94,11 @@ function messageRating(singleMovie) {
 
   
   if(singleMovie.title.trim() === '' || singleMovie.url.trim() === '' || singleMovie.rating.trim() === ''
-      || ratingValue < 1 || ratingValue > 5
+      || singleMovie.rating < 1 || singleMovie.rating > 5
   ){
  
     alert('Popuni sva polja(rating mora biti izmedju 1 i 5)');
-    window.location.reload()
+  
  
 }
 }
